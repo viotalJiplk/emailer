@@ -34,7 +34,7 @@ def load_file(filename):
 msg = createmsg("test", config["sender"], config["emailparts"])
 emails = []
 
-with open(config["csv"], newline='') as csvfile:
+with open(str(pathlib.Path(__file__).parent.resolve())+"/"+config["csv"], newline='') as csvfile:
     spamreader = csv.reader(csvfile, delimiter=',', quotechar='"')
     for row in spamreader:
         emails.append(row[0])
