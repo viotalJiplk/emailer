@@ -1,0 +1,17 @@
+{
+    "sender": "",
+    "password": "",
+    "csv": "email/emails.csv",
+    "emailparts": [
+        {
+            "file": "emailer/email.txt",
+            "mime": "plain"
+        },
+        {
+            "file": "emailer/email.html",
+            "mime": "html"
+        }
+    ],
+    "mailserver": "smtp.office365.com",
+    "mailserverport": 587
+}
