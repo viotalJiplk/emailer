@@ -2,11 +2,12 @@ import smtplib
 import ssl
 import json
 import csv
+import pathlib
 from email.message import EmailMessage
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-f = open("emailer/config.json")
+f = open(str(pathlib.Path(__file__).parent.resolve())+ "/config.json")
 config = json.loads(f.read())
 f.close()
 
@@ -25,7 +26,7 @@ def createmsg(subject, sender, parts):
     return msg
 
 def load_file(filename):
-    fp = open(filename)
+    fp = open(str(pathlib.Path(__file__).parent.resolve()) + "/" + filename)
     text = fp.read()
     fp.close()
     return text
