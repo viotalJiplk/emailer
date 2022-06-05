@@ -6,7 +6,7 @@ from email.message import EmailMessage
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-f = open("email/config.json")
+f = open("emailer/config.json")
 config = json.loads(f.read())
 f.close()
 
